@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Michroma";
+  src: url("../fonts/michroma.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-slab-regular.ttf");
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.navbar, h1, h2, h3 {
+  font-family: "Michroma";
+}
+
+p, li {
+	font-size: 1.2rem;
+}
+
+.container {
+  max-width: 900px;
+}
+
+/* Polaroid images */
+figure {
+  margin: 15px 15px !important;
+}
+
+figure img {
+  max-width:100% !important; 
+  height:auto;
+  margin: 10px;
+  background-color: white;
+  padding: 15px 15px 15px 15px;
+  box-shadow: 5px 10px 10px darkgrey;
+}
+
+figure img.even {
+  transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+}
+
+figure img.odd {
+  transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+}
+
+/* Obfuscate E-Mail */
+.cryptedmail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+	color: #000;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Modals */
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+  left: 0;
+  right: 0;
+	transition: opacity 200ms;
+  visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-card {
+  width: 80%;
+}
+
+.modal-background {
+  cursor: default;
+}
